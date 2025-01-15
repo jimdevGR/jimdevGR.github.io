@@ -23,8 +23,8 @@ let total_links = JSON.parse(fs.readFileSync(path.join(__dirname, 'links.json'))
 let total_exhibitions = JSON.parse(fs.readFileSync(path.join(__dirname, 'exhibitions.json')));
 
 // Αποστολή των συνδέσμων και εκθέσεων σε μορφή json
-app.get('/api/links', (req, res) => res.json(total_links));
-app.get('/api/exhibitions', (req, res) => res.json(total_exhibitions));
+app.get('/links', (req, res) => res.json(total_links));
+app.get('/exhibitions', (req, res) => res.json(total_exhibitions));
 
 
 
