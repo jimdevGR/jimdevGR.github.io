@@ -39,7 +39,7 @@ const aside_tobe_shown = document.getElementById(`aside_${nav_option.id.split('_
 // Συνάρτηση για την εμφάνιση των links με μορφή πίνακα
 async function show_links(type){
     try{
-        const server_response = await fetch('api/links');
+        const server_response = await fetch('api/links.json');
         const total_links = await server_response.json();
         const divided_links_based_ontype = total_links.filter(link => link.link_type === type);
         const links_table = document.createElement('table');
@@ -76,7 +76,7 @@ document.getElementById('sub_links_web').addEventListener('click', () => show_li
 // Συνάρτηση για την εμφάνιση των exhibitions με μορφή πίνακα
 async function show_exhibitions(type) {
     try{
-        const server_response_ex = await fetch('api/exhibitions');
+        const server_response_ex = await fetch('api/exhibitions.json');
         const total_exhibitions = await server_response_ex.json();
         const divided_exhibitions_basedon_type = total_exhibitions.filter(exhibition => exhibition.ex_type === type);
         const ex_table = document.createElement('table');
