@@ -1,0 +1,5 @@
+[{"ex_type" : "past", "ex_name" : "Edward Hopper exhibition 1", "ex_date" : "12/05/2019","ex_location" : "New York"},
+ {"ex_type" : "upcoming", "ex_name" : "Edward Hopper exhibition 2", "ex_date" : "09/8/2025", "ex_location" : "Chicago"},
+ {"ex_type" : "upcoming", "ex_name" : "Edward Hopper exhibition 3", "ex_date" : "21/11/2025", "ex_location" : "Los Angeles"},
+ {"ex_type" : "past", "ex_name" : "Edward Hopper exhibition 4", "ex_date" : "12/3/2018", "ex_location" : "London"}
+]

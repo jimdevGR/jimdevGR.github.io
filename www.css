@@ -1,0 +1,280 @@
+/*Για το desktop */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.gridContainer{
+width: 100%;
+height: 100vh;
+display: grid;
+grid-template-columns: 1fr 3fr;
+grid-template-rows: min-content min-content auto min-content;
+grid-template-areas:
+                   'header header'
+                   'nav nav'
+                   'aside main'
+                   'footer footer';
+}
+
+header{
+    grid-area: header;
+    border: 1px solid black;
+    background-color: aqua;
+    color: black;
+    text-align: center;
+    padding: 3px;
+}
+
+#Header_title{
+  margin-top: 10px;
+}
+
+nav{
+    grid-area: nav;
+    text-align: center;
+    border: 1px solid black;
+    display: block;
+}
+
+nav ul{
+    list-style-type: none;
+    display: inline-block;
+    margin-top: 4px;
+   
+}
+
+nav li{
+    float: left;
+    background-color: aqua;
+    color: black;
+    cursor: pointer;
+    padding: 4px;
+    margin: 5px;
+    text-align: center;
+    font-size: large;
+    border: 1px solid black;
+}
+
+nav li:hover{
+    text-decoration: underline;
+    background-color: red;
+}
+
+aside{
+    grid-area: aside;
+    border: 1px solid black;
+}
+
+aside ul{
+    list-style-type: none;
+    margin-left: 2px;
+    margin-top: 2px;
+    margin-right: 2px;
+    padding: 2px;
+}
+
+aside li{
+    background-color: aqua;
+    color: black;
+    cursor: pointer;
+    font-size: large; 
+    border: 1px solid black;
+    padding: 4px;
+}
+
+aside li:hover{
+    text-decoration: underline;
+    background-color: red;
+}
+
+main{
+    grid-area: main;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+
+footer{
+    grid-area: footer;
+    background-color: aqua;
+    color: black;
+    text-align: center;
+    border: 1px solid black;
+    font-size: small;
+}
+
+.content_title{
+  text-decoration: underline;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.my_button{
+  text-align: center;
+  background-color: aqua;
+  font-size: medium;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+.my_input{
+  border-radius: 5px;
+  background-color: aqua;
+  padding: 6px;
+  border: 1px solid black;
+}
+
+.my_submit{
+background-color: aqua;
+border: 1px solid black;
+border-radius: 5px;
+padding: 6px;
+margin: 3px;
+cursor: pointer;
+}
+
+table,th,tr,td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 4px;
+}
+
+table{
+  width: 100%;
+}
+
+th{
+  background-color: aqua;
+  text-align: center;
+  text-decoration: underline;
+  font-size: medium;
+  height: 28px;
+}
+
+#first_col{
+  text-align: center;
+}
+
+#second_col_ex, #third_col_ex, #fourth_col_ex{
+  text-align: right;
+}
+
+#second_col:hover{
+  background-color: lightslategray;
+}
+
+#head_col1{
+  width: 55px;
+}
+
+#head_col2{
+  width: 95px;
+}
+
+.icon{
+  float: left;
+  width: 55px;
+  height: auto;
+  vertical-align: middle;
+  border: 4px groove burlywood;
+  margin-left: 20px;
+}
+
+.table_container{
+  overflow-x: auto;
+  align-content: center;
+}
+
+.hidden{
+    display: none;
+}
+
+.flexbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flexbox > *{
+  margin: 4px;
+  width: 70vw;
+  height: 80vh;
+  padding: 4px;
+  border: 4px groove burlywood;
+  background-color: burlywood;
+}
+
+/* Για tablet*/
+@media (max-width: 768px) {
+    body {
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-columns: 1fr;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    aside {
+      grid-row: auto;
+      grid-column: 1 / -1;
+    }
+  
+    aside ul {
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: space-around; 
+    }
+  
+    main {
+      grid-row: auto;
+      grid-column: 1 / -1;
+    }
+  
+    footer {
+      grid-column: 1 / -1;
+    }
+  }
+  
+/*Για κινητά*/
+@media (max-width: 480px) {
+    body {
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-columns: 1fr;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav li {
+      width: 90%;
+      text-align: center;
+    }
+  
+    aside ul {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    aside li {
+      width: 100%;
+      text-align: center; 
+    }
+  
+    aside {
+      padding: 5px;
+    }
+  
+    main {
+      padding: 5px;
+    }
+  
+    footer {
+      padding: 10px;
+    }
+  }
